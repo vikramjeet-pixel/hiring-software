@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Careers at Star Supermarket | Jobs in Smethwick & Coventry</title>
+  <meta name="description" content="Join Star Supermarket Stores Limited. Explore open roles in Smethwick and Coventry — till operators, shop floor, warehouse, goods in, accounts, management and security." />
+  <meta name="theme-color" content="#ffffff" />
+  <link rel="icon" href="assets/logo.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS v3 (Play CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            star: { red: "#DC2626", redDark: "#B91C1C", green: "#16A34A", ink: "#171717" },
+          },
+          fontFamily: { sans: ["Inter", "system-ui", "sans-serif"] },
+        },
+      },
+    };
+  </script>
+  <style>
+    html { scroll-behavior: smooth; scroll-padding-top: 96px; }
+    body { -webkit-font-smoothing: antialiased; font-feature-settings: "cv11", "ss01"; }
+    .fade-in { animation: fade .3s ease both; }
+    @keyframes fade { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } }
+  </style>
+</head>
+<body class="bg-white text-star-ink font-sans text-lg leading-relaxed">
+
+  <!-- ============ NAVIGATION ============ -->
+  <header id="top-nav" class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-neutral-100">
+    <nav class="max-w-6xl mx-auto px-5 sm:px-8 h-20 flex items-center justify-between gap-6">
+      <a href="#" id="nav-logo" class="shrink-0" aria-label="Star Supermarket — Careers home">
+        <img src="assets/logo.png" alt="Star Supermarket" class="h-12 sm:h-14 w-auto" />
+      </a>
+
+      <p class="hidden md:block text-base text-neutral-500" aria-label="Branch locations">
+        Smethwick <span class="mx-2 text-neutral-300">/</span> Coventry
+      </p>
+
+      <a href="#roles" id="nav-cta"
+         class="inline-flex items-center bg-star-red hover:bg-star-redDark text-white text-base font-medium px-5 py-2.5 rounded-full transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-star-red">
+        View roles
+      </a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ============ INTRO ============ -->
+    <section id="intro">
+      <div class="max-w-6xl mx-auto px-5 sm:px-8 pt-20 pb-16 lg:pt-28 lg:pb-24">
+        <p class="text-base text-star-green font-medium mb-6">Careers at Star Supermarket</p>
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight leading-[1.1] max-w-3xl">
+          Join the team at your local Star.
+        </h1>
+        <p class="mt-6 max-w-2xl text-xl text-neutral-600">
+          We're hiring across our Smethwick and Coventry stores. Choose a role below to see what it involves and who we're looking for.
+        </p>
+        <p class="mt-10 text-base text-neutral-500">
+          <span id="stat-roles">7</span> roles &nbsp;·&nbsp; <span id="stat-openings">14–15</span> openings &nbsp;·&nbsp; 2 stores
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ ROLES ============ -->
+    <section id="roles" aria-labelledby="roles-heading" class="border-t border-neutral-100">
+      <div class="max-w-6xl mx-auto px-5 sm:px-8 py-16 lg:py-24">
+        <h2 id="roles-heading" class="text-3xl font-semibold tracking-tight">Open positions</h2>
+        <p class="text-neutral-500 mt-2">Select a role to view the full job description.</p>
+
+        <div class="mt-12 grid lg:grid-cols-12 gap-10 lg:gap-16 items-start">
+          <!-- Left: job list -->
+          <aside class="lg:col-span-4 lg:sticky lg:top-28">
+            <ul id="job-list" role="tablist" aria-label="Job categories" aria-orientation="vertical" class="space-y-1"></ul>
+          </aside>
+
+          <!-- Right: detail panel -->
+          <article id="job-detail" role="tabpanel" aria-live="polite" class="lg:col-span-8 scroll-mt-28"></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ BEFORE YOU START ============ -->
+    <section id="compliance" class="border-t border-neutral-100">
+      <div class="max-w-6xl mx-auto px-5 sm:px-8 py-16 lg:py-24 grid lg:grid-cols-12 gap-10 lg:gap-16">
+        <div class="lg:col-span-4">
+          <h2 class="text-3xl font-semibold tracking-tight">Before your first shift</h2>
+          <p class="mt-3 text-neutral-500">A few standard UK checks are completed before any offer is finalised.</p>
+        </div>
+        <dl class="lg:col-span-8 grid sm:grid-cols-2 gap-x-12 gap-y-10">
+          <div>
+            <dt class="font-medium">Right to Work</dt>
+            <dd class="mt-2 text-neutral-600">Original ID documents or a valid Home Office Share Code, verified before Day 1.</dd>
+          </div>
+          <div>
+            <dt class="font-medium">Age verification</dt>
+            <dd class="mt-2 text-neutral-600">Required for roles selling alcohol, tobacco, blades or lottery, in line with UK licensing law.</dd>
+          </div>
+          <div>
+            <dt class="font-medium">Two references</dt>
+            <dd class="mt-2 text-neutral-600">Contact details for two referees, at least one from a previous employer.</dd>
+          </div>
+          <div>
+            <dt class="font-medium">Address & NI number</dt>
+            <dd class="mt-2 text-neutral-600">Proof of address and your National Insurance number for payroll setup.</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ============ EQUAL OPPORTUNITIES ============ -->
+    <section id="equal-opportunities" class="border-t border-neutral-100">
+      <div class="max-w-6xl mx-auto px-5 sm:px-8 py-14">
+        <p class="max-w-3xl text-base text-neutral-500">
+          <span class="text-star-ink font-medium">Star Supermarket Stores Limited is an equal opportunity employer.</span>
+          All employment decisions are based on business needs, job requirements and individual qualifications, without regard to race, colour, religion, sex, national origin, age, disability, sexual orientation, gender identity, or any other status protected by the UK Equality Act 2010.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="border-t border-neutral-100">
+    <div class="max-w-6xl mx-auto px-5 sm:px-8 py-8 flex flex-col sm:flex-row gap-2 sm:items-center sm:justify-between text-base text-neutral-500">
+      <p>© <span id="year"></span> Star Supermarket Stores Limited</p>
+      <p>Smethwick · Coventry</p>
+    </div>
+  </footer>
+
+  <script src="jobs.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
