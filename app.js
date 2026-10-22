@@ -3,7 +3,7 @@
   "use strict";
 
   const jobs = window.JOBS || [];
-  const APPLY_URL = window.APPLY_URL;
+  const APPLY_URL = window.APPLY_URL || "https://forms.gle/LsuunCUkdj1DKjkp8";
   const listEl = document.getElementById("job-list");
   const detailEl = document.getElementById("job-detail");
 

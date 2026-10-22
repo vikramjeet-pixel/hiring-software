@@ -1,7 +1,7 @@
 // Job specifications — Star Supermarket Stores Limited Recruitment Guide
 // Edit this file to add, remove or update roles. The UI renders from this array.
 
-window.APPLY_URL = "https://forms.google.com/your-form-link-here";
+window.APPLY_URL = "https://forms.gle/LsuunCUkdj1DKjkp8";
 
 window.JOBS = [
   {
