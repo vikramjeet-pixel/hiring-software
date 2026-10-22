@@ -1,4 +1,4 @@
-// Job specifications — Star Supermarket Stores Limited Recruitment Guide
+// Job specifications — STAR SUPERMARKET COVENTRY LIMITED Recruitment Guide
 // Edit this file to add, remove or update roles. The UI renders from this array.
 
 window.APPLY_URL = "https://forms.gle/LsuunCUkdj1DKjkp8";

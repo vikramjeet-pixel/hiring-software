@@ -17,15 +17,10 @@
 
   /* ---------- Stats ---------- */
   (function stats() {
-    let min = 0, max = 0;
-    jobs.forEach((j) => {
-      const nums = j.positions.match(/\d+/g).map(Number);
-      min += Math.min(...nums);
-      max += Math.max(...nums);
-    });
-    document.getElementById("stat-roles").textContent = jobs.length;
-    document.getElementById("stat-openings").textContent = min === max ? min : `${min}–${max}`;
-    document.getElementById("year").textContent = new Date().getFullYear();
+    const statRoles = document.getElementById("stat-roles");
+    if (statRoles) statRoles.textContent = jobs.length;
+    const yearEl = document.getElementById("year");
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
   })();
 
   /* ---------- Left column: job list ---------- */
@@ -34,14 +29,14 @@
       (j) => `
       <li role="presentation">
         <button type="button" role="tab" id="tab-${j.id}" data-id="${j.id}" aria-controls="job-detail" aria-selected="false" tabindex="-1"
-          class="job-tab group w-full text-left flex items-start justify-between gap-3 pl-4 pr-3.5 py-3 rounded-lg border-l-2 border-transparent
+          class="job-tab group w-full text-left flex items-center justify-between gap-3 pl-4 pr-3.5 py-3 rounded-lg border-l-2 border-transparent
                  transition-colors hover:bg-neutral-50 focus:outline-none focus-visible:bg-neutral-50
                  aria-selected:border-star-red aria-selected:bg-neutral-50">
           <span class="min-w-0">
             <span class="block text-base font-medium text-neutral-800 group-aria-selected:text-star-red transition-colors">${esc(j.short)}</span>
             <span class="block text-sm text-neutral-500 mt-0.5">${esc(j.department)}</span>
           </span>
-          <span class="shrink-0 text-sm text-star-green font-medium pt-0.5">${esc(j.positions)}<span class="sr-only"> positions</span></span>
+          <svg class="w-4 h-4 shrink-0 text-neutral-400 group-aria-selected:text-star-red transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
         </button>
       </li>`
     )
@@ -52,7 +47,6 @@
   /* ---------- Right column: detail panel ---------- */
   function renderDetail(job) {
     const meta = [
-      ["Positions available", job.positions],
       ["Department", job.department],
       ["Reports to", job.reportsTo],
       ["Contract", job.contract],
@@ -73,7 +67,7 @@
       <div class="fade-in">
         <h3 class="text-2xl sm:text-3xl font-semibold tracking-tight leading-snug">${esc(job.title)}</h3>
 
-        <dl class="mt-5 grid grid-cols-2 md:grid-cols-4 gap-4 pb-6 border-b border-neutral-100">
+        <dl class="mt-5 grid grid-cols-1 sm:grid-cols-3 gap-4 pb-6 border-b border-neutral-100">
           ${meta
             .map(
               ([k, v]) => `
